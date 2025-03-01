@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Google Ads</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+
+    <h1>Welcome to My Website</h1>
+    <p>This is an example page with dynamically loaded Google Ads.</p>
+
+    <!-- Placeholder for Google Ad -->
+    <div id="ad-container"></div>
+
+    <script>
+        // Function to load Google Ads dynamically
+        function loadGoogleAd() {
+            var adContainer = document.getElementById("ad-container");
+            var adCode = `
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXX"
+                     data-ad-slot="XXXXXX"
+                     data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                <\/script>
+            `;
+            adContainer.innerHTML = adCode;
+        }
+
+        // Load the ad after the page is fully loaded
+        window.onload = function () {
+            loadGoogleAd();
+        };
+    </script>
+
+</body>
+
+</html>
